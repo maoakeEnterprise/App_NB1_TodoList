@@ -1,3 +1,55 @@
 <resources>
     <string name="app_name">My ApplicationTodoList</string>
+
+    <!--Home Page-->
+    <string name="Home_page_title">Aujourd\'hui</string>
+
+    <!--Next Page-->
+    <string name="Next_page_title">Prochainement</string>
+    <string name="Lundi">L</string>
+    <string name="Mardi">M</string>
+    <string name="Mercredi">M</string>
+    <string name="Jeudi">J</string>
+    <string name="Vendredi">V</string>
+    <string name="Samedi">S</string>
+    <string name="Dimanche">D</string>
+    <string name="Date">16 septembre 2021</string>
+
+    <!--Create task Page-->
+    <string name="Create_task_page_title">Chose à faire !</string>
+    <string name="Input_text_task_title">Nom de la tâche</string>
+    <string name="Input_text_description_title">Description</string>
+
+    <!--Project Page-->
+    <string name="Project_page_title">Nom du projet</string>
+
+    <!--Create Project Page-->
+    <string name="Create_project_page_title">Création du projet</string>
+    <string name="Input_text_create_project">Nom du projet</string>
+
+    <!--Graphics Tracking Page-->
+    <string name="Graphics_Tracking_page_title">Nom du projet</string>
+    <string name="Graphics_Tracking_page_name">Nom du Graphique / Jour</string>
+    <string name="Day_text">Jour</string>
+    <string name="months_text">Mois</string>
+    <string name="Years_text">Année</string>
+
+
+    <!--Menu Page-->
+    <string name="Graphic_text">Graphique Tracking</string>
+    <string name="Item_Menu_text_Today">Aujourd\'hui</string>
+    <string name="Item_Menu_text_Next">Prochainement</string>
+    <string name="Item_Menu_text_Project">Projets</string>
+    <string name="Item_Menu_text_Tickets">Etiquettes</string>
+    <string name="Item_Menu_text_Settings">Paramètres</string>
+
+    <!--Tickets customize-->
+    <string name="Item_Tickets_text">Etiquette</string>
+    <string name="Item_Description_text">Description</string>
+
+    <!--Buttons-->
+    <string name="validate_buttons_text">Valider</string>
+
+
+
 </resources>

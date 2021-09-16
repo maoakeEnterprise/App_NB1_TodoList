@@ -7,4 +7,24 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Couleur Application-->
+
+    <!--Couleur Menu-->
+    <color name="lightgrey">#C7C7C7</color>
+    <color name="transpgreen">#9ECAA3</color>
+    <color name="transpblue">#9EB1CA</color>
+    <color name="transppurple">#BA9ECA</color>
+    <color name="transpbluegreen">#9EC4CA</color>
+    <color name="transppink">#CA9EBD</color>
+    <color name="transpgrey_param">#A7A7A7</color>
+
+    <!--Couleur Graph-->
+    <color name="transpred">#E5A0A0</color>
+
+    <!--Couleur texte pour remplir champ ETC-->
+    <color name="grey1">#B0B0B0</color>
+    <color name="grey2">#AEAEAE</color>
+    <color name="grey3">#D5D5D5</color>
+
 </resources>
