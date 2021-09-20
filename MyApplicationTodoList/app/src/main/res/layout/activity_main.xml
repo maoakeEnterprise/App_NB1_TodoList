@@ -6,42 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/page_title"
+        style="@style/DefaultTextTitlePageStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Home_page_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/date_title"
+        style="@style/DefaultTextDayMonthYearsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Date"
+        android:textColor="#757575"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title" />
+
+    <View
+        android:id="@+id/lineView1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/lightgrey"
+
+        app:layout_constraintStart_toStartOf="@+id/date_title"
+        app:layout_constraintTop_toTopOf="@+id/date_title" />
 
     <FrameLayout
-        android:id="@+id/fragment_container_page"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-        <TextView
-            android:id="@+id/textView"
-            style="@style/DefaultTextTitlePageStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/Home_page_title" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="73dp"/>
 
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/DefaultTextDayMonthYearsStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="15dp"
-            android:text="@string/Date"
-            android:textColor="#757575" />
 
-        <View
-            android:id="@+id/lineView1"
-            android:layout_width="380dp"
-            android:layout_height="2dp"
-            android:background="@color/lightgrey"
-            android:layout_marginTop="70dp"
-            android:layout_marginStart="15dp"
-            />
-
-    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
