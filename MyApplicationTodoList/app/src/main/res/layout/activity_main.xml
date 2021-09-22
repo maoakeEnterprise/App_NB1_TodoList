@@ -47,6 +47,19 @@
         android:layout_height="match_parent"
         android:layout_marginTop="73dp"/>
 
+    <!-- <FrameLayout
+
+         android:id="@+id/standard_bottom_sheet"
+         android:layout_width="match_parent"
+         android:layout_height="80dp"
+         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+         app:layout_constraintBottom_toBottomOf="parent"
+         android:background="@color/lightgrey"
+         >
+         
+
+    </FrameLayout>-->
+
 
 
 
