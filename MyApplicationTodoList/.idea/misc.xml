@@ -7,11 +7,13 @@
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable-anydpi/ic_trash.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape.xml" value="0.264" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_bottom_sheet_menu.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_ticket_dropdown.xml" value="0.21458333333333332" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_tickets.xml" value="0.4" />
-        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/fragment_home.xml" value="0.2375" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/item_vertical_tickets.xml" value="0.3608174770965469" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_bottom_sheet_menu.xml" value="0.4" />
         <entry key="..\:/Users/maoak/StudioProjects/MyApplicationTodoList/app/src/main/res/layout/activity_main.xml" value="0.22644927536231885" />
       </map>
     </option>

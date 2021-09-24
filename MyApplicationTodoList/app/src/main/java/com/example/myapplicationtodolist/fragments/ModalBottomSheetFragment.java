@@ -20,8 +20,9 @@ public class ModalBottomSheetFragment extends BottomSheetDialogFragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        View view = super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.layout_bottom_sheet_menu,container, false);
 
         return view;
     }
+
 }
