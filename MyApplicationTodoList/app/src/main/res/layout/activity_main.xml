@@ -19,24 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/date_title"
-        style="@style/DefaultTextDayMonthYearsStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/Date"
-        android:textColor="#757575" />
 
-    <View
-        android:id="@+id/lineView1"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/lightgrey" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
