@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/date_title"
@@ -24,7 +24,7 @@
         android:background="@color/lightgrey" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_view_calendar"
+        android:id="@+id/recycle_view_calendar_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationtodolist.R;
+import com.example.myapplicationtodolist.adapter.TaskAdapter;
+import com.example.myapplicationtodolist.adapter.TaskAdapterCalendar;
 
 public class CalendarFragment extends Fragment {
 
@@ -23,6 +25,8 @@ public class CalendarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
 
         //recuperer le recycle view
+        RecyclerView verticalRecycleView = view.findViewById(R.id.recycle_view_calendar_fragment);
+        verticalRecycleView.setAdapter(new TaskAdapterCalendar());
 
         return view;
     }

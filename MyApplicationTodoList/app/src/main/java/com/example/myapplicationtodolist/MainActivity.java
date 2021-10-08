@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.myapplicationtodolist.fragments.CalendarFragment;
 import com.example.myapplicationtodolist.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity{
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity{
 
         //injecter le fragment dans la boite (fragment container)
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_container, new HomeFragment());
+            transaction.replace(R.id.fragment_container, new CalendarFragment());
         transaction.addToBackStack(null);
         transaction.commit();
 
