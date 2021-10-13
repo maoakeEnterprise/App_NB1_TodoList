@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity{
 
         //injecter le fragment dans la boite (fragment container)
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_container, new CalendarFragment());
+            transaction.replace(R.id.fragment_container, new CalendarFragment(this));
         transaction.addToBackStack(null);
         transaction.commit();
 

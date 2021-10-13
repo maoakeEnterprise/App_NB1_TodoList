@@ -38,7 +38,7 @@ public class TaskAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 2;
     }
 
 }

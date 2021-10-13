@@ -14,6 +14,13 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="DefaultButtonValidate">
+
+        <item name="android:startColor">@color/transppink</item>
+        <item name="android:endColor">@color/transpblue</item>
+
+    </style>
+
     <!--Composate Create default title -->
 
     <style name="DefaultTextTitlePageStyle">

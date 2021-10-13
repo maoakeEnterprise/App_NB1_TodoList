@@ -1,5 +1,6 @@
 package com.example.myapplicationtodolist.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,12 @@ import com.example.myapplicationtodolist.adapter.TaskAdapterCalendar;
 
 public class CalendarFragment extends Fragment {
 
+    Activity activity;
+
+    public CalendarFragment(Activity activity){
+        this.activity = activity;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -26,7 +33,7 @@ public class CalendarFragment extends Fragment {
 
         //recuperer le recycle view
         RecyclerView verticalRecycleView = view.findViewById(R.id.recycle_view_calendar_fragment);
-        verticalRecycleView.setAdapter(new TaskAdapterCalendar());
+        verticalRecycleView.setAdapter(new TaskAdapterCalendar(activity));
 
         return view;
     }
