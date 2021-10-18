@@ -46,51 +46,59 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
         >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-            <android.widget.Button
-                android:id="@+id/buttonDayGraph"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:background="@drawable/rounded_shape_button_day_graph"
-                android:text="@string/Day_text"
-                android:textColor="@color/white"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                />
-            <android.widget.Button
-                android:id="@+id/buttonMonthGraph"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:background="@drawable/rounded_shape_month_graph"
-                android:text="@string/months_text"
-                android:textColor="@color/grey1"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                />
-            <android.widget.Button
-                android:id="@+id/buttonYearsGraph"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                android:background="@drawable/rounded_shape_button_years_graph"
-                android:text="@string/Years_text"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                android:textColor="@color/grey1"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </LinearLayout>
+                <android.widget.Button
+                    android:id="@+id/buttonDayGraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_shape_button_day_graph"
+                    android:text="@string/Day_text"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    />
+                <android.widget.Button
+                    android:id="@+id/buttonMonthGraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_shape_month_graph"
+                    android:text="@string/months_text"
+                    android:textColor="@color/grey1"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    />
+                <android.widget.Button
+                    android:id="@+id/buttonYearsGraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_shape_button_years_graph"
+                    android:text="@string/Years_text"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey1"
+                    />
 
 
+            </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
 
 
 </LinearLayout>

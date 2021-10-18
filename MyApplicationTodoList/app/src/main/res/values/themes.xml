@@ -12,12 +12,18 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:buttonStyle">@style/ToggleButtonGraph</item>
     </style>
 
     <style name="DefaultButtonValidate">
 
         <item name="android:startColor">@color/transppink</item>
         <item name="android:endColor">@color/transpblue</item>
+
+    </style>
+
+    <style name="ToggleButtonGraph" parent="android:style/Widget.Button">
+        <item name="android:colorBackground">@color/grey1</item>
 
     </style>
 
