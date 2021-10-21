@@ -1,6 +1,7 @@
 package com.example.myapplicationtodolist;
 
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -11,10 +12,23 @@ public class BottomSheetMenu {
 
     private BottomSheetBehavior bottomSheetMenu;
     private final View view;
+    private ImageButton buttonMenuBottomSheet;
+    private ImageButton buttonAddBottomSheet;
+    private View lineBottomSheet;
+    private LinearLayout menuLinearLayoutBottomSheet;
+
 
     public BottomSheetMenu(View v) {
-        this.view = v;
 
+        View lineDropBottomSheet;
+
+        this.view = v;
+        lineDropBottomSheet = this.view.findViewById(R.id.line_drop_menu_bottom_sheet);
+        lineDropBottomSheet.setVisibility(View.INVISIBLE);
+        buttonMenuBottomSheet = this.view.findViewById(R.id.menu_button_bottom_sheet);
+        buttonAddBottomSheet = this.view.findViewById(R.id.add_button_bottom_sheet);
+        lineBottomSheet = this.view.findViewById(R.id.line_drop_menu_bottom_sheet);
+        menuLinearLayoutBottomSheet = this.view.findViewById(R.id.linearlayout_menu_bottom_sheet);
     }
 
     public void showBottomSheet() {
@@ -29,16 +43,33 @@ public class BottomSheetMenu {
     }
 
     public void activateButtonActivity(){
+
         if(verifyViewNotNull()){
+
+            //Creating an action on the button who show up the menu bottom sheet
+            buttonMenuBottomSheet.setOnClickListener(view -> {
+                bottomSheetMenu.setState(BottomSheetBehavior.STATE_EXPANDED);
+            });
+
+            lineBottomSheet.setOnClickListener(view -> {
+                bottomSheetMenu.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            });
+
             bottomSheetMenu.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
                 @Override
                 public void onStateChanged(@NonNull View bottomSheet, int newState) {
-
                 }
 
                 @Override
                 public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
+                    if(slideOffset > 0){
+                        menuLinearLayoutBottomSheet.setVisibility(View.GONE);
+                        lineBottomSheet.setVisibility(View.VISIBLE);
+                    }
+                    else if(slideOffset <= 0){
+                        menuLinearLayoutBottomSheet.setVisibility(View.VISIBLE);
+                        lineBottomSheet.setVisibility(View.INVISIBLE);
+                    }
                 }
             });
         }

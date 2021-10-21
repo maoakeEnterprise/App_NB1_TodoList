@@ -13,6 +13,7 @@
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable-anydpi/ic_setting.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable-anydpi/ic_tickets.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable-anydpi/ic_trash.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/gradient_bc_button_validate.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/gradient_bc_fab.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/gradient_button_add_float.xml" value="0.2755208333333333" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_bottom_sheet_tickets.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_button_day_graph.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_button_years_graph.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_line_menu_bottom_sheet.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_month_graph.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_pop_up_selector_tickets.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/drawable/rounded_shape_ticket_dropdown.xml" value="0.21458333333333332" />
@@ -34,7 +36,7 @@
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/item_calendar.xml" value="0.259375" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/item_vertical_tickets.xml" value="0.3608174770965469" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_add_things_to_do.xml" value="0.264" />
-        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_bottom_sheet_menu.xml" value="0.264" />
+        <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_bottom_sheet_menu.xml" value="0.6" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_bottom_sheet_task.xml" value="0.259375" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_create_project.xml" value="0.259375" />
         <entry key="..\:/Users/maoak/StudioProjects/App_NB1_TodoList/MyApplicationTodoList/app/src/main/res/layout/layout_pop_up_select_tickets.xml" value="0.259375" />
