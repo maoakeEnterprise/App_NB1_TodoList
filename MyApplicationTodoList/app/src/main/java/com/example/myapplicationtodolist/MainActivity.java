@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity{
             transaction.replace(R.id.fragment_container, new HomeFragment());
         transaction.addToBackStack(null);
         transaction.commit();
-
-
-
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.myapplicationtodolist;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -55,6 +56,10 @@ public class BottomSheetMenu {
                 bottomSheetMenu.setState(BottomSheetBehavior.STATE_COLLAPSED);
             });
 
+            buttonAddBottomSheet.setOnClickListener(view1 -> {
+                startActivityAddTask(view1);
+            });
+
             bottomSheetMenu.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
                 @Override
                 public void onStateChanged(@NonNull View bottomSheet, int newState) {
@@ -63,16 +68,29 @@ public class BottomSheetMenu {
                 @Override
                 public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                     if(slideOffset > 0){
-                        menuLinearLayoutBottomSheet.setVisibility(View.GONE);
-                        lineBottomSheet.setVisibility(View.VISIBLE);
+                        visibilityOnMenuBottomSheetOrLineBottomSheet(menuLinearLayoutBottomSheet,lineBottomSheet,true);
                     }
                     else if(slideOffset <= 0){
-                        menuLinearLayoutBottomSheet.setVisibility(View.VISIBLE);
-                        lineBottomSheet.setVisibility(View.INVISIBLE);
+                        visibilityOnMenuBottomSheetOrLineBottomSheet(menuLinearLayoutBottomSheet,lineBottomSheet,false);
                     }
                 }
             });
         }
+    }
+
+    private void visibilityOnMenuBottomSheetOrLineBottomSheet(LinearLayout menuLinear, View line, Boolean cas){
+        if(cas){
+            menuLinear.setVisibility(View.GONE);
+            line.setVisibility(View.VISIBLE);
+        }else{
+            menuLinear.setVisibility(View.VISIBLE);
+            line.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void startActivityAddTask(View view1){
+        Intent intent = new Intent(view1.getContext(),AddTaskActivity.class);
+        view1.getContext().startActivity(intent);
     }
 
 }
