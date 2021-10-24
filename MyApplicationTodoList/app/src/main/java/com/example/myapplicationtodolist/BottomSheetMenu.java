@@ -14,22 +14,32 @@ public class BottomSheetMenu {
     private BottomSheetBehavior bottomSheetMenu;
     private final View view;
     private ImageButton buttonMenuBottomSheet;
-    private ImageButton buttonAddBottomSheet;
     private View lineBottomSheet;
     private LinearLayout menuLinearLayoutBottomSheet;
+
+    public ImageButton buttonAddBottomSheet;
+    public LinearLayout buttonGraphTracking;
+    public LinearLayout buttonMainActivity;
+    public LinearLayout buttonNextTask;
+    public LinearLayout buttonProject;
+    public LinearLayout buttonTickets;
+    public LinearLayout buttonSettings;
 
 
     public BottomSheetMenu(View v) {
 
-        View lineDropBottomSheet;
-
         this.view = v;
-        lineDropBottomSheet = this.view.findViewById(R.id.line_drop_menu_bottom_sheet);
-        lineDropBottomSheet.setVisibility(View.INVISIBLE);
         buttonMenuBottomSheet = this.view.findViewById(R.id.menu_button_bottom_sheet);
         buttonAddBottomSheet = this.view.findViewById(R.id.add_button_bottom_sheet);
         lineBottomSheet = this.view.findViewById(R.id.line_drop_menu_bottom_sheet);
+        lineBottomSheet.setVisibility(View.INVISIBLE);
         menuLinearLayoutBottomSheet = this.view.findViewById(R.id.linearlayout_menu_bottom_sheet);
+        buttonGraphTracking = this.view.findViewById(R.id.buttonGraphTrackingActivity);
+        buttonMainActivity = this.view.findViewById(R.id.buttonMainActivity);
+        buttonNextTask = this.view.findViewById(R.id.buttonNextTaskActivity);
+        buttonProject = this.view.findViewById(R.id.buttonProjectActivity);
+        buttonTickets = this.view.findViewById(R.id.buttonTicketsActivity);
+        buttonSettings = this.view.findViewById(R.id.buttonSettingsActivity);
     }
 
     public void showBottomSheet() {
@@ -56,10 +66,6 @@ public class BottomSheetMenu {
                 bottomSheetMenu.setState(BottomSheetBehavior.STATE_COLLAPSED);
             });
 
-            buttonAddBottomSheet.setOnClickListener(view1 -> {
-                startActivityAddTask(view1);
-            });
-
             bottomSheetMenu.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
                 @Override
                 public void onStateChanged(@NonNull View bottomSheet, int newState) {
@@ -77,7 +83,6 @@ public class BottomSheetMenu {
             });
         }
     }
-
     private void visibilityOnMenuBottomSheetOrLineBottomSheet(LinearLayout menuLinear, View line, Boolean cas){
         if(cas){
             menuLinear.setVisibility(View.GONE);
@@ -87,10 +92,5 @@ public class BottomSheetMenu {
             line.setVisibility(View.INVISIBLE);
         }
     }
-
-    private void startActivityAddTask(View view1){
-        Intent intent = new Intent(view1.getContext(),AddTaskActivity.class);
-        view1.getContext().startActivity(intent);
-    }
-
+    public void setCollapsedBottomSheetMenu(){bottomSheetMenu.setState(BottomSheetBehavior.STATE_COLLAPSED);}
 }

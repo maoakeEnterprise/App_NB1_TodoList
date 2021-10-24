@@ -52,6 +52,7 @@
         />
 
     <LinearLayout
+        android:id="@+id/buttonGraphTrackingActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -79,6 +80,7 @@
             />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/buttonMainActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transpblue"
@@ -106,6 +108,7 @@
             android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/buttonNextTaskActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transppurple"
@@ -132,6 +135,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonProjectActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transpbluegreen"
@@ -157,6 +161,7 @@
             />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/buttonTicketsActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transppink"
@@ -183,6 +188,7 @@
             />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/buttonSettingsActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transpgrey_param"
