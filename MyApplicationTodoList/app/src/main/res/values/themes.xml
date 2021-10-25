@@ -71,6 +71,9 @@
 
     <style name="ModalBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <!-- Apply attributes here -->
+        <item
+            name="android:background">@android:color/transparent
+        </item>
     </style>
 
     <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
@@ -79,6 +82,14 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
 
 </resources>

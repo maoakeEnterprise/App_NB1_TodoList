@@ -18,9 +18,11 @@ import com.example.myapplicationtodolist.adapter.TaskAdapterCalendar;
 public class CalendarFragment extends Fragment {
 
     Activity activity;
+    TaskAdapter.OnTaskListener onTaskListener;
 
-    public CalendarFragment(Activity activity){
+    public CalendarFragment(Activity activity, TaskAdapter.OnTaskListener onTaskListener){
         this.activity = activity;
+        this.onTaskListener = onTaskListener;
     }
 
     @Nullable
@@ -33,7 +35,7 @@ public class CalendarFragment extends Fragment {
 
         //recuperer le recycle view
         RecyclerView verticalRecycleView = view.findViewById(R.id.recycle_view_calendar_fragment);
-        verticalRecycleView.setAdapter(new TaskAdapterCalendar(activity));
+        verticalRecycleView.setAdapter(new TaskAdapterCalendar(activity,onTaskListener));
 
         return view;
     }

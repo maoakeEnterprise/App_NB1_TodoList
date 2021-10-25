@@ -1,7 +1,11 @@
 package com.example.myapplicationtodolist;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -9,29 +13,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.myapplicationtodolist.adapter.TaskAdapter;
 import com.example.myapplicationtodolist.fragments.CalendarFragment;
 import com.example.myapplicationtodolist.fragments.GraphicsFragment;
 import com.example.myapplicationtodolist.fragments.HomeFragment;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTaskListener{
 
     private BottomSheetMenu bottomSheetMenu;
-    private FrameLayout test;
     private HomeFragment homeFragment;
-    private BottomSheetTask bottomSheetTask;
+    public static final String TAG = "SomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        homeFragment = new HomeFragment();
 
         initBottomSheetMenu();
         activeButtonListenerBottomSheet();
-        activeButtonHomeFragment();
+        //activeButtonHomeFragment();
 
-        loadFragment(homeFragment);
+        loadFragment(new HomeFragment(this));
     }
 
     private void loadFragment(Fragment fragment){
@@ -54,15 +57,15 @@ public class MainActivity extends AppCompatActivity{
         });
 
         bottomSheetMenu.buttonGraphTracking.setOnClickListener(view -> {
-            loadFragment(new GraphicsFragment());
+            loadFragment(new GraphicsFragment(this));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
         });
         bottomSheetMenu.buttonMainActivity.setOnClickListener(view -> {
-            loadFragment(new HomeFragment());
+            loadFragment(new HomeFragment(this));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
         });
         bottomSheetMenu.buttonNextTask.setOnClickListener(view -> {
-            loadFragment(new CalendarFragment(this));
+            loadFragment(new CalendarFragment(this,this));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
         });
         bottomSheetMenu.buttonAddProject.setOnClickListener(view -> {
@@ -76,16 +79,15 @@ public class MainActivity extends AppCompatActivity{
         });
 
     }
-
-    public void activeButtonHomeFragment(){
-        homeFragment.itemTickets.setOnClickListener(view -> {
-
-        });
-    }
-
     public void startActivityAddTask(View v, Intent intent){
         v.getContext().startActivity(intent);
     }
 
 
+    @Override
+    public void onTaskClick(int position, View view) {
+        Log.d(TAG, "GetClicked");
+        BottomSheetTask bottomSheetTask = new BottomSheetTask(view);
+        bottomSheetTask.initBottomSheetDialog();
+    }
 }

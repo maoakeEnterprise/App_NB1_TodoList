@@ -15,8 +15,11 @@ public class TaskAdapterCalendar extends RecyclerView.Adapter<TaskAdapterCalenda
 
 
     Activity activity;
-    public TaskAdapterCalendar(Activity activity){
+    TaskAdapter.OnTaskListener onTaskListener;
+    public TaskAdapterCalendar(Activity activity, TaskAdapter.OnTaskListener onTaskListener){
+
         this.activity = activity;
+        this.onTaskListener = onTaskListener;
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
@@ -47,7 +50,7 @@ public class TaskAdapterCalendar extends RecyclerView.Adapter<TaskAdapterCalenda
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        TaskAdapter taskAdapter = new TaskAdapter();
+        TaskAdapter taskAdapter = new TaskAdapter(onTaskListener);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(activity);
         holder.itemPlanningDay.setLayoutManager(linearLayoutManager);
         holder.itemPlanningDay.setAdapter(taskAdapter);

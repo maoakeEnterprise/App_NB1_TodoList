@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_sheet_task_container"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="500dp"
     android:background="@drawable/rounded_shape_bottom_sheet_tickets"
-    >
+    app:layout_behavior="@string/bottom_sheet_behavior">
     <View
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"

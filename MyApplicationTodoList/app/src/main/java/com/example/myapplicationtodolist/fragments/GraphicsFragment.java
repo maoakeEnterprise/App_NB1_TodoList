@@ -14,6 +14,12 @@ import com.example.myapplicationtodolist.R;
 import com.example.myapplicationtodolist.adapter.TaskAdapter;
 
 public class GraphicsFragment extends Fragment {
+
+    TaskAdapter.OnTaskListener onTaskListener;
+
+    public GraphicsFragment(TaskAdapter.OnTaskListener onTaskListener){
+        this.onTaskListener = onTaskListener;
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -25,7 +31,7 @@ public class GraphicsFragment extends Fragment {
         //recuperer le recycle view
 
         RecyclerView verticalRecycleView = view.findViewById(R.id.vertical_recycle_view);
-        verticalRecycleView.setAdapter(new TaskAdapter());
+        verticalRecycleView.setAdapter(new TaskAdapter(onTaskListener));
 
         return view;
     }
