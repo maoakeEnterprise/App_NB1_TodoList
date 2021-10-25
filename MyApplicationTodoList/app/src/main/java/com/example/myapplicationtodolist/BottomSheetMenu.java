@@ -1,8 +1,8 @@
 package com.example.myapplicationtodolist;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -13,9 +13,9 @@ public class BottomSheetMenu {
 
     private BottomSheetBehavior bottomSheetMenu;
     private final View view;
-    private ImageButton buttonMenuBottomSheet;
-    private View lineBottomSheet;
-    private LinearLayout menuLinearLayoutBottomSheet;
+    private final ImageButton buttonMenuBottomSheet;
+    private final View lineBottomSheet;
+    private final LinearLayout menuLinearLayoutBottomSheet;
 
     public ImageButton buttonAddBottomSheet;
     public LinearLayout buttonGraphTracking;
@@ -24,6 +24,7 @@ public class BottomSheetMenu {
     public LinearLayout buttonProject;
     public LinearLayout buttonTickets;
     public LinearLayout buttonSettings;
+    public ImageView buttonAddProject;
 
 
     public BottomSheetMenu(View v) {
@@ -40,6 +41,7 @@ public class BottomSheetMenu {
         buttonProject = this.view.findViewById(R.id.buttonProjectActivity);
         buttonTickets = this.view.findViewById(R.id.buttonTicketsActivity);
         buttonSettings = this.view.findViewById(R.id.buttonSettingsActivity);
+        buttonAddProject = this.view.findViewById(R.id.add_button_project);
     }
 
     public void showBottomSheet() {

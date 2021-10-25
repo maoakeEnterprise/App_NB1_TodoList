@@ -27,6 +27,24 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CreateProjetcActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MyApplicationTodoList.CreateProjetcActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddTicketsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MyApplicationTodoList.AddTicketsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
 
     </application>

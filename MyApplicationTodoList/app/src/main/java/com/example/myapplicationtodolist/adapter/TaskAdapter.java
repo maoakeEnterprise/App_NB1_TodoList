@@ -5,11 +5,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationtodolist.R;
 
 public class TaskAdapter extends RecyclerView.Adapter {
+
+    public CardView itemTickets;
 
     //ranger tout les composants à controler
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -23,6 +26,7 @@ public class TaskAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView;
+        itemTickets = parent.findViewById(R.id.item_one_tickets);
 
         itemView = LayoutInflater
                 .from(parent.getContext())

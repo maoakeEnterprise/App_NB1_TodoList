@@ -159,6 +159,22 @@
             android:textSize="20dp"
             android:textStyle="bold"
             />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_return"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:rotation="-90"
+            />
+        <ImageView
+            android:id="@+id/add_button_project"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add_black"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="10dp"
+            />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/buttonTicketsActivity"

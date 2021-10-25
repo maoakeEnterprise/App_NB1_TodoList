@@ -7,32 +7,25 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationtodolist.R;
 import com.example.myapplicationtodolist.adapter.TaskAdapter;
 
-public class HomeFragment extends Fragment{
-
-    public CardView itemTickets;
-    TaskAdapter taskAdapter;
-
+public class GraphicsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState)
     {
-        taskAdapter = new TaskAdapter();
-        itemTickets = taskAdapter.itemTickets;
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_graph_tracking, container, false);
 
         //recuperer le recycle view
 
         RecyclerView verticalRecycleView = view.findViewById(R.id.vertical_recycle_view);
-        verticalRecycleView.setAdapter(taskAdapter);
+        verticalRecycleView.setAdapter(new TaskAdapter());
 
         return view;
     }
