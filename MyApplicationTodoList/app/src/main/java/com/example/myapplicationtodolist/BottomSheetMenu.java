@@ -76,23 +76,30 @@ public class BottomSheetMenu {
                 @Override
                 public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                     if(slideOffset > 0){
-                        visibilityOnMenuBottomSheetOrLineBottomSheet(menuLinearLayoutBottomSheet,lineBottomSheet,true);
+                        visibilityOnMenuBottomSheetOrLineBottomSheet(buttonMenuBottomSheet,buttonAddBottomSheet,lineBottomSheet,true);
                     }
                     else if(slideOffset <= 0){
-                        visibilityOnMenuBottomSheetOrLineBottomSheet(menuLinearLayoutBottomSheet,lineBottomSheet,false);
+                        visibilityOnMenuBottomSheetOrLineBottomSheet(buttonMenuBottomSheet,buttonAddBottomSheet,lineBottomSheet,false);
                     }
                 }
             });
         }
     }
-    private void visibilityOnMenuBottomSheetOrLineBottomSheet(LinearLayout menuLinear, View line, Boolean cas){
+    private void visibilityOnMenuBottomSheetOrLineBottomSheet(ImageButton buttonMenuBottomSheet,ImageButton buttonAddBottomSheet, View line, Boolean cas){
         if(cas){
-            menuLinear.setVisibility(View.GONE);
+            buttonMenuBottomSheet.setVisibility(View.GONE);
+            buttonAddBottomSheet.setVisibility(View.GONE);
             line.setVisibility(View.VISIBLE);
         }else{
-            menuLinear.setVisibility(View.VISIBLE);
+            buttonMenuBottomSheet.setVisibility(View.VISIBLE);
+            buttonAddBottomSheet.setVisibility(View.VISIBLE);
             line.setVisibility(View.INVISIBLE);
         }
     }
+
+    public void visibilityMenuBottomSheetOnGraphicTracking(){
+        buttonAddBottomSheet.setVisibility(View.GONE);
+    }
+
     public void setCollapsedBottomSheetMenu(){bottomSheetMenu.setState(BottomSheetBehavior.STATE_COLLAPSED);}
 }

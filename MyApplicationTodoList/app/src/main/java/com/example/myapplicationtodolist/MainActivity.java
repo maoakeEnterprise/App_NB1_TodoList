@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         bottomSheetMenu.buttonGraphTracking.setOnClickListener(view -> {
             loadFragment(new GraphicsFragment(this));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
+            bottomSheetMenu.visibilityMenuBottomSheetOnGraphicTracking();
         });
         bottomSheetMenu.buttonMainActivity.setOnClickListener(view -> {
             loadFragment(new HomeFragment(this));
