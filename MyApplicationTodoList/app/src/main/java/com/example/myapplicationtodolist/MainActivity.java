@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
 
         initBottomSheetMenu();
         activeButtonListenerBottomSheet();
-        //activeButtonHomeFragment();
 
         loadFragment(new HomeFragment(this));
     }
