@@ -6,12 +6,13 @@ public class Etiquettes {
     private ArrayList<Etiquette> listeTickets;
 
     public Etiquettes(){
-        listeTickets = null;
-        init();
+        this.listeTickets = new ArrayList<>();
+
     }
 
-    private void init(){
+    public void init(){
         Etiquette etiquette;
+        this.listeTickets = new ArrayList<>();
 
         for(int i=0; i<5; i++) {
             etiquette = new Etiquette("Etiquette " + i, "Description " + i);

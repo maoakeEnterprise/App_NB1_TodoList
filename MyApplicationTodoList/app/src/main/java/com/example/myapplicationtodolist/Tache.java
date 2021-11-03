@@ -1,24 +1,25 @@
 package com.example.myapplicationtodolist;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 public class Tache {
 
     private String name;
     private String describe;
     private Etiquette etiquette;
-    private Date date;
+    private SimpleDateFormat date;
 
     //CONSTRUCTOR
 
-    public Tache(String nom, String description, Date date){
+    public Tache(String nom, String description, SimpleDateFormat date){
         this.name = nom;
         this.describe = description;
         this.date= date;
         etiquette = null;
     }
 
-    public Tache(String nom, String description, Date date, Etiquette etiquette){
+    public Tache(String nom, String description, SimpleDateFormat date, Etiquette etiquette){
         this.name = nom;
         this.describe = description;
         this.date= date;
@@ -35,7 +36,7 @@ public class Tache {
     public String getDescription() {
         return describe;
     }
-    public Date getDate() {
+    public SimpleDateFormat getDate() {
         return date;
     }
     public Etiquette getEtiquette() {
@@ -50,7 +51,7 @@ public class Tache {
     public void setDescription(String description) {
         this.describe = description;
     }
-    public void setDate(Date date) {
+    public void setDate(SimpleDateFormat date) {
         this.date = date;
     }
     public void setEtiquette(Etiquette etiquette) {

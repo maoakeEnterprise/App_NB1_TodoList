@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplicationtodolist.Etiquettes;
 import com.example.myapplicationtodolist.R;
 import com.example.myapplicationtodolist.adapter.TaskAdapter;
 import com.example.myapplicationtodolist.adapter.TaskAdapterCalendar;
@@ -19,10 +20,12 @@ public class CalendarFragment extends Fragment {
 
     Activity activity;
     TaskAdapter.OnTaskListener onTaskListener;
+    private Etiquettes tickets;
 
-    public CalendarFragment(Activity activity, TaskAdapter.OnTaskListener onTaskListener){
+    public CalendarFragment(Activity activity, TaskAdapter.OnTaskListener onTaskListener, Etiquettes tickets){
         this.activity = activity;
         this.onTaskListener = onTaskListener;
+        this.tickets = tickets;
     }
 
     @Nullable
@@ -35,7 +38,7 @@ public class CalendarFragment extends Fragment {
 
         //recuperer le recycle view
         RecyclerView verticalRecycleView = view.findViewById(R.id.recycle_view_calendar_fragment);
-        verticalRecycleView.setAdapter(new TaskAdapterCalendar(activity,onTaskListener));
+        verticalRecycleView.setAdapter(new TaskAdapterCalendar(activity,onTaskListener, tickets));
 
         return view;
     }

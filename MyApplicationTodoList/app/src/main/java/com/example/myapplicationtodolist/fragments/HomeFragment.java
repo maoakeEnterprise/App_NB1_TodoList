@@ -12,15 +12,19 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplicationtodolist.Etiquette;
+import com.example.myapplicationtodolist.Etiquettes;
 import com.example.myapplicationtodolist.R;
 import com.example.myapplicationtodolist.adapter.TaskAdapter;
 
 public class HomeFragment extends Fragment{
 
     private TaskAdapter.OnTaskListener onTaskListener;
+    private Etiquettes tickets;
 
-    public HomeFragment(TaskAdapter.OnTaskListener onTaskListener){
+    public HomeFragment(TaskAdapter.OnTaskListener onTaskListener, Etiquettes tickets){
         this.onTaskListener = onTaskListener;
+        this.tickets = tickets;
     }
 
     @Nullable
@@ -29,7 +33,7 @@ public class HomeFragment extends Fragment{
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState)
     {
-        TaskAdapter taskAdapter = new TaskAdapter(this.onTaskListener);
+        TaskAdapter taskAdapter = new TaskAdapter(this.onTaskListener, this.tickets);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //recuperer le recycle view

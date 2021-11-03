@@ -21,19 +21,49 @@ import com.example.myapplicationtodolist.fragments.HomeFragment;
 public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTaskListener{
 
     private BottomSheetMenu bottomSheetMenu;
-    private HomeFragment homeFragment;
+    //private HomeFragment homeFragment;
     public static final String TAG = "SomeActivity";
+    private Taches tasks;
+    private Etiquettes tickets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initDataBase();
+
 
         initBottomSheetMenu();
         activeButtonListenerBottomSheet();
 
-        loadFragment(new HomeFragment(this));
+        loadFragment(new HomeFragment(this, this.tickets));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private void initDataBase(){
+        this.tickets = new Etiquettes();
+        this.tickets.init();
+        this.tasks = new Taches();
+        this.tasks.init();
     }
 
     private void loadFragment(Fragment fragment){
@@ -56,16 +86,16 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         });
 
         bottomSheetMenu.buttonGraphTracking.setOnClickListener(view -> {
-            loadFragment(new GraphicsFragment(this));
+            loadFragment(new GraphicsFragment(this, this.tickets));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
             bottomSheetMenu.visibilityMenuBottomSheetOnGraphicTracking();
         });
         bottomSheetMenu.buttonMainActivity.setOnClickListener(view -> {
-            loadFragment(new HomeFragment(this));
+            loadFragment(new HomeFragment(this,this.tickets));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
         });
         bottomSheetMenu.buttonNextTask.setOnClickListener(view -> {
-            loadFragment(new CalendarFragment(this,this));
+            loadFragment(new CalendarFragment(this,this, this.tickets));
             bottomSheetMenu.setCollapsedBottomSheetMenu();
         });
         bottomSheetMenu.buttonAddProject.setOnClickListener(view -> {
