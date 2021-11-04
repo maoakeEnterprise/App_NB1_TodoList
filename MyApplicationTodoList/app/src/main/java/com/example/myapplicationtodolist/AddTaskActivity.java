@@ -19,14 +19,9 @@ public class AddTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_add_things_to_do);
 
-        returnArrow = findViewById(R.id.returnArrow);
-        nameTask = findViewById(R.id.taskName);
-        describeTask = findViewById(R.id.describerTask);
-        buttonValidate = findViewById(R.id.buttonValidate);
 
-        returnArrow.setOnClickListener(view -> {
-            finish();
-        });
+        this.initButtonOfTheActivity();
+        this.clickListenerAddTask();
 
     }
 
@@ -34,5 +29,21 @@ public class AddTaskActivity extends AppCompatActivity {
     public void finish() {
         super.finish();
         //overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+    }
+
+    private void clickListenerAddTask(){
+        returnArrow.setOnClickListener(view -> {
+            finish();
+        });
+
+        buttonValidate.setOnClickListener(view ->{
+
+        });
+    }
+    private void initButtonOfTheActivity(){
+        returnArrow = findViewById(R.id.returnArrow);
+        nameTask = findViewById(R.id.editTexttaskName);
+        describeTask = findViewById(R.id.editTextdescriberTask);
+        buttonValidate = findViewById(R.id.buttonValidate);
     }
 }

@@ -8,18 +8,18 @@ public class Tache {
     private String name;
     private String describe;
     private Etiquette etiquette;
-    private SimpleDateFormat date;
+    private String date;
 
     //CONSTRUCTOR
 
-    public Tache(String nom, String description, SimpleDateFormat date){
+    public Tache(String nom, String description, String date){
         this.name = nom;
         this.describe = description;
         this.date= date;
         etiquette = null;
     }
 
-    public Tache(String nom, String description, SimpleDateFormat date, Etiquette etiquette){
+    public Tache(String nom, String description, String date, Etiquette etiquette){
         this.name = nom;
         this.describe = description;
         this.date= date;
@@ -36,7 +36,7 @@ public class Tache {
     public String getDescription() {
         return describe;
     }
-    public SimpleDateFormat getDate() {
+    public String getDate() {
         return date;
     }
     public Etiquette getEtiquette() {
@@ -51,7 +51,7 @@ public class Tache {
     public void setDescription(String description) {
         this.describe = description;
     }
-    public void setDate(SimpleDateFormat date) {
+    public void setDate(String date) {
         this.date = date;
     }
     public void setEtiquette(Etiquette etiquette) {

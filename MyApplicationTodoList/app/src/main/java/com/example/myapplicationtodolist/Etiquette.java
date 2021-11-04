@@ -9,19 +9,19 @@ public class Etiquette {
 
     private String name;
     private String describe;
-    private ArrayList<Date> datesValidateTickets;
+    private ArrayList<String> datesValidateTickets;
 
     //CONSTRUCTOR
 
     public Etiquette(String nom, String description){
         this.name = nom;
         this.describe = description;
-        datesValidateTickets = new ArrayList<Date>();
+        datesValidateTickets = new ArrayList<String>();
     }
 
     //FUNCTION CLASS
 
-    public void aValidateTicket(Date date){
+    public void aValidateTicket(String date){
         this.datesValidateTickets.add(date);
     }
 
@@ -33,7 +33,7 @@ public class Etiquette {
     public String getNom() {
         return name;
     }
-    public ArrayList<Date> getDatesValidateTickets() {
+    public ArrayList<String> getDatesValidateTickets() {
         return datesValidateTickets;
     }
 
@@ -45,7 +45,7 @@ public class Etiquette {
     public void setNom(String nom) {
         this.name = nom;
     }
-    public void setDatesValidateTickets(ArrayList<Date> dates) {
+    public void setDatesValidateTickets(ArrayList<String> dates) {
         this.datesValidateTickets = dates;
     }
 }

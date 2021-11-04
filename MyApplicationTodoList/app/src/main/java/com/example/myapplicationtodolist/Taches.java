@@ -8,10 +8,11 @@ import java.util.Date;
 
 public class Taches {
     private ArrayList<Tache> tasks;
-    private ArrayList<Date> dates;
+    private ArrayList<String> dates;
 
     public void Taches(){
         this.tasks = new ArrayList<>();
+        this.dates = new ArrayList<>();
     }
 
     public void init(){
@@ -19,7 +20,7 @@ public class Taches {
         Tache tache;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         for(int i=0; i < 5 ; i++) {
-            tache = new Tache("tache "+i, "description "+i, sdf);
+            tache = new Tache("tache "+i, "description "+i, sdf.format(new Date()));
             this.tasks.add(tache);
         }
 
@@ -38,6 +39,9 @@ public class Taches {
     }
 
     public void aValidateTask(int index){
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        this.dates.add(sdf.format(date));
         this.deleteTask(index);
     }
 
@@ -46,7 +50,7 @@ public class Taches {
         return tasks;
     }
 
-    public ArrayList<Date> getDates() {
+    public ArrayList<String> getDates() {
         return dates;
     }
 
@@ -55,7 +59,7 @@ public class Taches {
         this.tasks = tasks;
     }
 
-    public void setDates(ArrayList<Date> dates) {
+    public void setDates(ArrayList<String> dates) {
         this.dates = dates;
     }
 }

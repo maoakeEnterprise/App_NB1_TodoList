@@ -18,6 +18,8 @@ import com.example.myapplicationtodolist.fragments.CalendarFragment;
 import com.example.myapplicationtodolist.fragments.GraphicsFragment;
 import com.example.myapplicationtodolist.fragments.HomeFragment;
 
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTaskListener{
 
     private BottomSheetMenu bottomSheetMenu;
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         this.tickets.init();
         this.tasks = new Taches();
         this.tasks.init();
+        System.out.println("DATE: "+this.tasks.getTasks().get(0).getDate());
     }
 
     private void loadFragment(Fragment fragment){
